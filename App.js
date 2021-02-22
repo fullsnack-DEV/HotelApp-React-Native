@@ -26,6 +26,11 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import HomeScreen from './src/Screens/HomeScreen';
 import PostComponent from './src/components/PostComponent';
+import feed from './assests/data/feed';
+import SearchScreen from './src/Screens/SearchScreen';
+import Destinationsearchscreen from './src/Screens/Destinationsearchscreen';
+
+const post1 = feed[0];
 
 const App: () => React$Node = () => {
   return (
@@ -33,7 +38,9 @@ const App: () => React$Node = () => {
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         {/* <HomeScreen /> */}
-        <PostComponent />
+        {/* <PostComponent post={post1} /> */}
+        {/* <SearchScreen /> */}
+        <Destinationsearchscreen />
       </SafeAreaView>
     </>
   );

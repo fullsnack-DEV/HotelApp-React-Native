@@ -1,7 +1,8 @@
 import React from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
 
-const PostComponent = () => {
+const PostComponent = (props) => {
+  const post = props.post;
   return (
     <View style={styles.container}>
       {/* image */}
@@ -9,27 +10,26 @@ const PostComponent = () => {
       <Image
         style={styles.image}
         source={{
-          uri:
-            'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/1.jpg',
+          uri: post.image,
         }}
       />
 
       {/* bed and bedrrom  */}
-      <Text style={styles.bedroom}>1 Bed and 1 Bedroom</Text>
+      <Text style={styles.bedroom}>
+        {post.bed} Bed and {post.bedroom} Bedroom
+      </Text>
       {/* type and description */}
       <Text style={styles.description} numberOfLines={3}>
-        This elegant and modish house is a comfortable and snug dwelling which
-        will cater to all the needs of you and your family. The homely
-        environment of this house would make you want to stay a little longer.{' '}
+        {post.type}.{post.title}
       </Text>
       {/* old Price & new price */}
       <Text style={styles.prices}>
-        <Text style={styles.oldprice}> $26 </Text>
-        <Text style={styles.newprice}> $23 </Text>/ Night
+        <Text style={styles.oldprice}> $ {post.oldPrice} </Text>
+        <Text style={styles.newprice}> ${post.newPrice} </Text>/ Night
       </Text>
 
       {/* total price */}
-      <Text style={styles.totalprice}>$220 total</Text>
+      <Text style={styles.totalprice}> ${post.totalPrice}</Text>
     </View>
   );
 };
