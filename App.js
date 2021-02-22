@@ -24,13 +24,16 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import HomeScreen from './src/Screens/HomeScreen';
+import PostComponent from './src/components/PostComponent';
 
 const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <Text style={{color: '#000'}}>Hello World</Text>
+        {/* <HomeScreen /> */}
+        <PostComponent />
       </SafeAreaView>
     </>
   );
