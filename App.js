@@ -29,6 +29,7 @@ import PostComponent from './src/components/PostComponent';
 import feed from './assests/data/feed';
 import SearchScreen from './src/Screens/SearchScreen';
 import Destinationsearchscreen from './src/Screens/Destinationsearchscreen';
+import GuestScreen from './src/Screens/GuestScreen';
 
 const post1 = feed[0];
 
@@ -40,7 +41,8 @@ const App: () => React$Node = () => {
         {/* <HomeScreen /> */}
         {/* <PostComponent post={post1} /> */}
         {/* <SearchScreen /> */}
-        <Destinationsearchscreen />
+        {/* <Destinationsearchscreen /> */}
+        <GuestScreen />
       </SafeAreaView>
     </>
   );
