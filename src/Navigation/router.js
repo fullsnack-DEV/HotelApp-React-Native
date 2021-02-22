@@ -34,7 +34,7 @@ const Router = () => {
           name={'SearchScreen'}
           component={SearchScreen}
           options={{
-            headerShown: false,
+            title: 'SearchScreen',
           }}
         />
 
