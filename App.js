@@ -5,7 +5,7 @@
  * @format
  * @flow strict-local
  */
-
+import 'react-native-gesture-handler';
 import React from 'react';
 import Entypo from 'react-native-vector-icons/Entypo';
 import {
@@ -24,26 +24,14 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import HomeScreen from './src/Screens/HomeScreen';
-import PostComponent from './src/components/PostComponent';
-import feed from './assests/data/feed';
-import SearchScreen from './src/Screens/SearchScreen';
-import Destinationsearchscreen from './src/Screens/Destinationsearchscreen';
-import GuestScreen from './src/Screens/GuestScreen';
 
-const post1 = feed[0];
+import Router from './src/Navigation/router';
 
 const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        {/* <HomeScreen /> */}
-        {/* <PostComponent post={post1} /> */}
-        {/* <SearchScreen /> */}
-        {/* <Destinationsearchscreen /> */}
-        <GuestScreen />
-      </SafeAreaView>
+      <Router />
     </>
   );
 };

@@ -9,7 +9,7 @@ import {
   Dimensions,
 } from 'react-native';
 import Fontisto from 'react-native-vector-icons/Fontisto';
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
   return (
     <View>
       <ImageBackground
@@ -17,7 +17,7 @@ const HomeScreen = () => {
         style={styles.image}>
         <Pressable
           style={styles.Searchbutton}
-          onPress={() => console.warn('Search button Clicked ')}>
+          onPress={() => navigation.navigate('SearchDestinationScreen')}>
           <Fontisto
             name="search"
             size={20}
