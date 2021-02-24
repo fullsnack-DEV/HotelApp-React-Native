@@ -18,14 +18,15 @@ const Destinationsearchscreen = ({navigation}) => {
     <View style={styles.container}>
       <View style={{height: 600}}>
         <GooglePlacesAutocomplete
-          placeholder="Where are you going?"
+          placeholder="Search"
           onPress={(data, details = null) => {
             // 'details' is provided when fetchDetails = true
             console.log(data, details);
           }}
           query={{
-            key: 'AIzaSyBTa7RS-0LBdCNB1fqgPJh--jmLwIPGWNc',
+            key: 'AIzaSyCw4IeKIhvGpWSAHYHzBU5ap57MUD90F0A',
             language: 'en',
+            types: '(cities)',
           }}
           renderRow={(item) => (
             <Suggestionrow item={item} navigation={navigation} />
@@ -35,6 +36,8 @@ const Destinationsearchscreen = ({navigation}) => {
     </View>
   );
 };
+
+//
 
 const styles = StyleSheet.create({
   container: {

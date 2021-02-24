@@ -8,6 +8,7 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Feather from 'react-native-vector-icons/Feather';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import ExploreNavigation from './ExploreNAvogation';
+import Searchresultsmap from '../Screens/Searchresultsmap';
 
 const Tab = createBottomTabNavigator();
 
@@ -28,7 +29,7 @@ export default function Hometabnavigator() {
       />
       <Tab.Screen
         name={'Saved'}
-        component={HomeScreen}
+        component={Searchresultsmap}
         options={{
           tabBarIcon: ({color}) => (
             <FontAwesome name="heart-o" size={25} color={color} />
