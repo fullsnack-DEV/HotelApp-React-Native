@@ -24,9 +24,8 @@ const Destinationsearchscreen = ({navigation}) => {
             console.log(data, details);
           }}
           query={{
-            key: 'AIzaSyCw4IeKIhvGpWSAHYHzBU5ap57MUD90F0A',
+            key: 'AIzaSyC2AxWklJPKgHVSF1jQWnv06Cu394AvZ_w',
             language: 'en',
-            types: '(cities)',
           }}
           renderRow={(item) => (
             <Suggestionrow item={item} navigation={navigation} />
