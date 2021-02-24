@@ -10,6 +10,7 @@ import {
 import search from '../../assests/data/search';
 import Entypo from 'react-native-vector-icons/Entypo';
 import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
+import Suggestionrow from '../components/Suggestionrow';
 const Destinationsearchscreen = ({navigation}) => {
   const [textinput, settextinput] = useState();
 
@@ -17,15 +18,16 @@ const Destinationsearchscreen = ({navigation}) => {
     <View style={styles.container}>
       <View style={{height: 600}}>
         <GooglePlacesAutocomplete
-          placeholder="Search"
+          placeholder="Where are you going?"
           onPress={(data, details = null) => {
             // 'details' is provided when fetchDetails = true
             console.log(data, details);
           }}
           query={{
-            key: 'AIzaSyB9wvEKxYmERB5FiNl6CCaPvGz4Lm91dik',
+            key: 'AIzaSyBTa7RS-0LBdCNB1fqgPJh--jmLwIPGWNc',
             language: 'en',
           }}
+          renderRow={(item) => <Suggestionrow item={item} />}
         />
       </View>
 
