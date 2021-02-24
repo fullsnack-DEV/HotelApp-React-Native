@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, Pressable, StyleSheet} from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
 
-const Suggestionrow = ({item}) => {
+const Suggestionrow = ({item, navigation}) => {
   return (
     <Pressable
       style={styles.row}
