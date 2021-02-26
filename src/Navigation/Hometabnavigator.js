@@ -1,6 +1,7 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from '../Screens/HomeScreen';
+import Mapscreen from '../Screens/Mapscreen';
 
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -28,7 +29,7 @@ export default function Hometabnavigator() {
       />
       <Tab.Screen
         name={'Saved'}
-        component={HomeScreen}
+        component={Mapscreen}
         options={{
           tabBarIcon: ({color}) => (
             <FontAwesome name="heart-o" size={25} color={color} />

@@ -12,8 +12,6 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
 import Suggestionrow from '../components/Suggestionrow';
 const Destinationsearchscreen = ({navigation}) => {
-  const [textinput, settextinput] = useState();
-
   return (
     <View style={styles.container}>
       <View style={{height: 600}}>
@@ -24,8 +22,9 @@ const Destinationsearchscreen = ({navigation}) => {
             console.log(data, details);
           }}
           query={{
-            key: 'AIzaSyC2AxWklJPKgHVSF1jQWnv06Cu394AvZ_w',
+            key: 'AIzaSyAioeCbGRgUVMz2YdClb2U2H1uokwD2YWU',
             language: 'en',
+            types: '(cities)',
           }}
           renderRow={(item) => (
             <Suggestionrow item={item} navigation={navigation} />
