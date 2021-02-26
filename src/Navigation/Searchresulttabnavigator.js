@@ -15,7 +15,7 @@ const Searchresulttabnavigator = () => {
         },
       }}>
       <Tab.Screen name={'list'} component={SearchScreen} />
-      <Tab.Screen name={'Map'} component={SearchScreen} />
+      <Tab.Screen name={'Map'} component={Mapscreen} />
     </Tab.Navigator>
   );
 };
