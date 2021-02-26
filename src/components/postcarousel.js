@@ -6,7 +6,7 @@ const Postcarousel = (props) => {
 
   const width = useWindowDimensions().width;
   return (
-    <View style={[styles.container, {width: width - 60}]}>
+    <View style={[styles.container, {width: width - 80}]}>
       <View style={styles.innercontainer}>
         {/* image */}
 
@@ -40,9 +40,21 @@ const Postcarousel = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    height: 125,
+    height: '25%',
+    width: '100%',
     margin: 20,
+
     padding: 5,
+
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.34,
+    shadowRadius: 6.27,
+
+    elevation: 10,
   },
 
   innercontainer: {
@@ -50,6 +62,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     borderRadius: 20,
     overflow: 'hidden',
+    height: '350%',
+    width: '110%',
+    left: -10,
   },
 
   image: {
@@ -61,7 +76,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     color: '#5b5b5b',
   },
-  prices: {fontSize: 18, marginVertical: 10},
+  prices: {fontSize: 15, marginVertical: 10},
   newprice: {
     fontWeight: 'bold',
     color: '#000',
@@ -70,11 +85,10 @@ const styles = StyleSheet.create({
   totalprice: {
     color: '#5b5b5b',
     textDecorationLine: 'underline',
-    fontSize: 15,
+    fontSize: 10,
   },
   description: {
-    fontSize: 18,
-    lineHeight: 25,
+    fontSize: 15,
   },
 });
 

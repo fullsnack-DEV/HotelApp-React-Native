@@ -9,7 +9,7 @@ export default function CustomMarker(props) {
     <Marker coordinate={coordinate} onPress={onPress}>
       <View
         style={{
-          backgroundColor: isSelected ? '#000' : '#fff',
+          backgroundColor: isSelected ? '#fff' : '#000',
           borderWidth: 1,
           borderRadius: 10,
           borderColor: 'grey',
@@ -18,7 +18,7 @@ export default function CustomMarker(props) {
         }}>
         <Text
           style={{
-            color: isSelected ? '#fff' : '#000',
+            color: isSelected ? '#000' : '#fff',
             fontWeight: 'bold',
             textAlign: 'center',
             padding: 5,
